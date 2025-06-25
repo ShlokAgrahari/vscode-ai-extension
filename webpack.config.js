@@ -6,9 +6,7 @@ const path = require('path');
 
 /** @typedef {import('webpack').Configuration} WebpackConfig **/
 
-/**
- * 1️⃣ BACKEND CONFIG — VS Code extension (Node.js)
- */
+
 const extensionConfig = {
   target: 'node',
   mode: 'none',
@@ -39,9 +37,7 @@ const extensionConfig = {
   }
 };
 
-/**
- * 2️⃣ FRONTEND CONFIG — React WebView (runs in browser inside VS Code)
- */
+
 const webviewConfig = {
   target: 'web',
   mode: 'development',
@@ -62,7 +58,7 @@ const webviewConfig = {
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader', 'postcss-loader'] // needed for Tailwind
+        use: ['style-loader', 'css-loader', 'postcss-loader'] 
       }
     ]
   },
